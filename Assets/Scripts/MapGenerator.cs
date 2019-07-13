@@ -12,6 +12,10 @@ public class MapGenerator : MonoBehaviour
     //so the sampling point is divide by scale to get a non-interger value
     public float scale;
 
+    public int octaves;
+    public float persistance;
+    public float lacunarity;
+
     public bool autoUpdate;
 
     private MapDisplay theMapDisplay;
@@ -19,7 +23,7 @@ public class MapGenerator : MonoBehaviour
     public void GenerateMap()
     {
         //generate noise map using perlin noise
-        float[,] generatedNoiseMap = Noise.GenerateNoiseMap(width, height, scale);
+        float[,] generatedNoiseMap = Noise.GenerateNoise(width, height, scale, octaves, persistance, lacunarity);
 
         //display the map
         theMapDisplay = GetComponent<MapDisplay>();

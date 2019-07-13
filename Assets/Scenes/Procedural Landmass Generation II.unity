@@ -166,8 +166,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   width: 100
   height: 100
-  scale: 8.36
-  noiseMap: {fileID: 11400000, guid: 9a3ccd39cd049bb47bab9885c0f7cca7, type: 2}
+  scale: 5.53
+  octaves: 6
+  persistance: 0.94
+  lacunarity: 1.57
+  autoUpdate: 1
 --- !u!114 &211362311
 MonoBehaviour:
   m_ObjectHideFlags: 0
